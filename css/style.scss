@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+    font-weight: 100;
+}
+
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-image: url('../images/iphone.png');
+    color: white;
+    max-width: 320px;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size:contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 15px;
+    height: 100vh;
+    &__minutes, &__seconds, &__milliseconds{
+        width: 29%;
+    }
+    &__time {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 150px;
+        font-size: 70px;
+        text-align: center;
+        padding: 30px 0 30px 0;
+    }
+
+    &__functions {
+        margin: 15px 15px 0 15px;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 0 15px 0;
+        border-bottom: thin solid gray;
+        line-height: 20px;
+
+        &__clear,
+        &__start,
+        &__stop {
+            padding: 15px;
+            border-radius: 70%;
+            height: 40px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        &__clear {
+            border: 2px solid black;
+            outline: 2px solid rgb(28, 28, 30);
+            background-color: rgb(28, 28, 30);
+
+            &:hover {
+                background-color: rgb(19, 19, 20);
+                outline: 2px solid rgb(19, 19, 20);
+            }
+        }
+
+        &__start {
+            border: 2px solid black;
+            outline: 2px solid rgb(12, 42, 18);
+            background-color: rgb(12, 42, 18);
+            color: rgb(105, 187, 121);
+
+            &:hover {
+                background-color: rgb(10, 32, 14);
+                outline: 2px solid rgb(10, 32, 14);
+            }
+        }
+
+        &__stop {
+            border: 2px solid black;
+            outline: 2px solid rgb(76, 18, 13);
+            background-color: rgb(76, 18, 13);
+            color: rgb(237, 75, 64);
+
+            &:hover {
+                background-color: rgb(54, 13, 9);
+                outline: 2px solid rgb(54, 13, 9);
+            }
+        }
+    }
+    .custom-scrollbar{
+        &::-webkit-scrollbar {
+            width: 1px;
+            background-color: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 1em;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+    }
+    &__laps {
+        display: flex;
+        flex-direction: column;
+        margin: 0 15px 15px 15px;
+        overflow-y: auto;
+        max-height: 230px;
+        &::-webkit-scrollbar {
+            width: 0;
+            background-color: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 1em;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        &__item {
+            border-bottom: thin solid gray;
+            padding: 15px 3px 15px 3px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+    }
+}
